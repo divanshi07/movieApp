@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+}
+  
+html{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body{
+    background: #508C9B
+}

@@ -1,0 +1,14 @@
+.star-rating {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .star-rating .fa {
+    font-size: 2rem;
+    cursor: pointer;
+    color: gold;
+  }
+  
+  .star-rating .fa-star-o {
+    color: gray;
+  }

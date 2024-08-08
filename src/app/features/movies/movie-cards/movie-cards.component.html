@@ -1,0 +1,21 @@
+<div class="card movie-card">
+  <img [src]="posterUrl" class="card-img-top movie-poster" alt="..." (click)="getMovie(movie.id)">
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.movie }}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      {{ movie.rating }}
+      <i class="fa fa-star rating-star" aria-hidden="true"></i>
+      <span (click)="openRatingModal(movie.id)">
+        <i class="fa fa-star-o rate-star" aria-hidden="true"></i>
+      </span>
+    </li>
+  </ul>
+  <div class="card-body">
+    <a [attr.href]="movie.imdb_url" target="_blank" class="card-link">
+      <i class="fa fa-play play-icon" aria-hidden="true"></i>Trailer
+    </a>
+  </div>
+  <app-rating-modal #ratingModal (ratingUpdated)="onRatingUpdated($event)"></app-rating-modal>
+</div>

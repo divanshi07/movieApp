@@ -1,0 +1,24 @@
+<div *ngIf="!movieDetails">
+    no movie found...
+</div>
+
+<div class="movie h-100 d-flex align-items-center justify-content-center" *ngIf="movieDetails">
+    <div class="movie-image-container img-responsive">
+        <img [src]="posterUrl" alt="Mike Statham - Customer" class="movie-image img-responsive">
+    </div>
+    <div class="movie-info col-lg-3 col-md-3 col-sm-2 col-xs-1">
+        <h1 class="movie-name">{{movieDetails.movie}}</h1>
+        <h2 class="movie-trailer">
+            <a [attr.href]="movieDetails.imdb_url" target="_blank">Watch here</a>
+        </h2>
+        <p class="movie-text">IMDb is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows.</p>
+        <p class="movie-text">      
+            <i class="fa fa-star rating-star" aria-hidden="true"></i>
+            {{ movieDetails.rating }}
+            <span (click)="openRatingModal(movieDetails.id)">
+              <i class="fa fa-star-o rate-star" aria-hidden="true"></i>
+            </span></p>
+        <button class="btn btn-light" [routerLink]="['']">Back</button>
+    </div>
+    <app-rating-modal #ratingModal (ratingUpdated)="onRatingUpdated($event)"></app-rating-modal>
+</div>

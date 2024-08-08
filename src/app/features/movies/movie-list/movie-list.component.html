@@ -1,0 +1,15 @@
+
+<app-navbar></app-navbar>
+<div class="movie-list">
+    <div class="list-group" *ngFor="let item of filteredMovies">
+        <a [attr.href]="item.imdb_url" class="list-group-item list-group-item-action" aria-current="true" target="_blank">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{item.movie}}</h5>
+            <small>{{item.rating}}<i class="fa fa-star rating-star" aria-hidden="true"></i></small>
+          </div>
+        </a>
+      </div>
+      <div *ngIf="filteredMovies.length === 0">
+        <h1 class="text-center">Sorry No movie found</h1>
+    </div>
+</div>

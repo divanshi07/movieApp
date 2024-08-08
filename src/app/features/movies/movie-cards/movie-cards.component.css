@@ -1,0 +1,132 @@
+.movie-card {
+    width: 18rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #EEEEEE;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-left: auto !important;
+    margin-right: auto !important;
+    ;
+}
+
+.movie-card:hover {
+    box-shadow: 0px 0px 3px 3px rgba(0.5, 0.5, 0.5, 3);
+}
+
+.card-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #134B70
+}
+
+.list-group-item {
+    background: #EEEEEE;
+    color: #508C9B
+}
+
+.rating-star {
+    color: orange;
+    margin-left: 0.5rem;
+}
+
+.rate-star {
+    margin-left: 1rem;
+    color: #134B70;
+    cursor: pointer;
+}
+
+.card-link {
+    text-decoration: none;
+    background: #134B70;
+    color: #EEEEEE;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.play-icon {
+    margin: 0.5rem;
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, less than 425px) */
+
+@media (min-width: 425px) and (max-width: 767.98px) {
+    .movie-card {
+        margin-top: 2.5rem;
+        width: 20rem !important;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-link {
+        padding: 0.25rem;
+        margin: 0.5rem;
+    }
+}
+
+/* tablets and equivalent devices (less than 1200px and greater than 768px)*/
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .movie-card {
+        margin-top: 2.5rem;
+        width: 10rem !important;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-link {
+        padding: 0.45rem;
+        margin: 0.85rem;
+    }
+}
+
+/* Extra large devices (large desktops, less than 1200px) */
+@media (max-width: 1199.98px) and (min-width: 900px){
+    .movie-card {
+      margin-top: 2.8rem;
+      width: 13rem !important;
+    }
+    .card-title {
+      font-size: 1.25rem;
+    }
+    .card-link {
+      padding: 0.5rem;
+      margin: 0.9rem;
+    }
+  }
+
+/* Extra extra large devices (larger desktops, 2560px and up, 4K devices) */
+@media (min-width: 2560px) {
+    .movie-card {
+        margin-top: 3rem;
+        width: 30rem !important;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-link {
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+}

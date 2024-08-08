@@ -1,0 +1,18 @@
+.movie-list{
+    margin: 0.5rem 10rem;
+}
+
+.rating-star{
+    color: orange;
+    margin:0 1rem;
+  }
+
+.list-group-item{
+    margin: 1px;
+}
+
+@media (max-width: 767.98px) {
+    .movie-list{
+        margin: 0.1rem;
+    }
+}
